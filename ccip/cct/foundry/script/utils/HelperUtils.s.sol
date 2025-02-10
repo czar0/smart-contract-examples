@@ -17,6 +17,10 @@ library HelperUtils {
             return "arbitrumSepolia";
         } else if (chainId == 84532) {
             return "baseSepolia";
+        } else if (chainId == 1337) {
+            return "chainAlpha";
+        } else if (chainId == 2337) {
+            return "chainBeta";
         } else {
             revert("Unsupported chain ID");
         }
@@ -35,6 +39,10 @@ library HelperUtils {
             return helperConfig.getArbitrumSepolia();
         } else if (chainId == 84532) {
             return helperConfig.getBaseSepoliaConfig();
+        } else if (chainId == 1337) {
+            return helperConfig.getChainAlphaConfig();
+        } else if (chainId == 2337) {
+            return helperConfig.getChainBetaConfig();
         } else {
             revert("Unsupported chain ID");
         }

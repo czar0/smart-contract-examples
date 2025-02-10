@@ -26,6 +26,10 @@ contract HelperConfig is Script {
             activeNetworkConfig = getAvalancheFujiConfig();
         } else if (block.chainid == 84532) {
             activeNetworkConfig = getBaseSepoliaConfig();
+        } else if (block.chainid == 1337) {
+            activeNetworkConfig = getChainAlphaConfig();
+        } else if (block.chainid == 2337) {
+            activeNetworkConfig = getChainBetaConfig();
         }
     }
 
@@ -83,5 +87,33 @@ contract HelperConfig is Script {
             nativeCurrencySymbol: "ETH"
         });
         return baseSepoliaConfig;
+    }
+
+    function getChainAlphaConfig() public pure returns (NetworkConfig memory) {
+        NetworkConfig memory chainAlphaConfig = NetworkConfig({
+            chainSelector: 3379446385462418246,
+            router: 0x9ab7CA8a88F8e351f9b0eEEA5777929210199295,
+            rmnProxy: 0x664D6EbAbbD5cf656eD07A509AFfBC81f9615741,
+            tokenAdminRegistry: 0x43D1F9096674B5722D359B6402381816d5B22F28,
+            registryModuleOwnerCustom: 0x4245CF4518CB2C280f5e9c6a03c90C147F80B4d9,
+            link: 0x42699A7612A82f1d9C36148af9C77354759b210b,
+            confirmations: 2,
+            nativeCurrencySymbol: "ETH"
+        });
+        return chainAlphaConfig;
+    }
+
+    function getChainBetaConfig() public pure returns (NetworkConfig memory) {
+        NetworkConfig memory chainBetaConfig = NetworkConfig({
+            chainSelector: 12922642891491394802,
+            router: 0x9ab7CA8a88F8e351f9b0eEEA5777929210199295,
+            rmnProxy: 0x664D6EbAbbD5cf656eD07A509AFfBC81f9615741,
+            tokenAdminRegistry: 0x43D1F9096674B5722D359B6402381816d5B22F28,
+            registryModuleOwnerCustom: 0x4245CF4518CB2C280f5e9c6a03c90C147F80B4d9,
+            link: 0x42699A7612A82f1d9C36148af9C77354759b210b,
+            confirmations: 2,
+            nativeCurrencySymbol: "ETH"
+        });
+        return chainBetaConfig;
     }
 }
