@@ -15,6 +15,8 @@ export enum Chains {
   arbitrumSepolia = "arbitrumSepolia",
   sepolia = "sepolia",
   baseSepolia = "baseSepolia",
+  chainAlpha = "chainAlpha",
+  chainBeta = "chainBeta",
 }
 
 export type Configs = {

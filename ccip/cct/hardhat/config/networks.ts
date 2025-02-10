@@ -43,6 +43,20 @@ const networks: Networks = {
     nonce: undefined,
     accounts,
   },
+  [Chains.chainAlpha]: {
+    ...configData.chainAlpha,
+    url: process.env.CHAIN_ALPHA_RPC_URL || "UNSET",
+    gasPrice: undefined,
+    nonce: undefined,
+    accounts,
+  },
+  [Chains.chainBeta]: {
+    ...configData.chainBeta,
+    url: process.env.CHAIN_BETA_RPC_URL || "UNSET",
+    gasPrice: undefined,
+    nonce: undefined,
+    accounts,
+  },
 };
 
 const etherscan: EtherscanConfig = {
@@ -51,6 +65,8 @@ const etherscan: EtherscanConfig = {
     [Chains.sepolia]: process.env.ETHERSCAN_API_KEY || "UNSET",
     [Chains.arbitrumSepolia]: process.env.ARBISCAN_API_KEY || "UNSET",
     [Chains.baseSepolia]: process.env.BASESCAN_API_KEY || "UNSET",
+    [Chains.chainAlpha]: "chainAlpha",
+    [Chains.chainBeta]: "chainBeta",
   },
   customChains: [
     {
@@ -60,6 +76,22 @@ const etherscan: EtherscanConfig = {
         apiURL:
           "https://api.routescan.io/v2/network/testnet/evm/43113/etherscan",
         browserURL: "https://testnet.snowtrace.io",
+      },
+    },
+    {
+      network: Chains.chainAlpha,
+      chainId: configData.chainAlpha.chainId,
+      urls: {
+        apiURL: "https://chain-alpha-blockscout.mt1.sandbox.enterprise.chain.link/api",
+        browserURL: "https://chain-alpha-blockscout.mt1.sandbox.enterprise.chain.link",
+      },
+    },
+    {
+      network: Chains.chainBeta,
+      chainId: configData.chainBeta.chainId,
+      urls: {
+        apiURL: "https://chain-beta-blockscout.mt1.sandbox.enterprise.chain.link/api",
+        browserURL: "https://chain-beta-blockscout.mt1.sandbox.enterprise.chain.link",
       },
     },
   ],

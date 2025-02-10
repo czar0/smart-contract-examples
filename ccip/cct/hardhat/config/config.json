@@ -42,5 +42,27 @@
     "link": "0xE4aB69C077896252FAFBD49EFD26B5D171A32410",
     "confirmations": 2,
     "nativeCurrencySymbol": "ETH"
+  },
+  "chainAlpha": {
+    "chainId": 1337,
+    "chainSelector": "3379446385462418246",
+    "router": "0x9ab7ca8a88f8e351f9b0eeea5777929210199295",
+    "rmnProxy": "0x664d6ebabbd5cf656ed07a509affbc81f9615741",
+    "tokenAdminRegistry": "0x43d1f9096674b5722d359b6402381816d5b22f28",
+    "registryModuleOwnerCustom": "0x4245cf4518cb2c280f5e9c6a03c90c147f80b4d9",
+    "link": "0x42699A7612A82f1d9C36148af9C77354759b210b",
+    "confirmations": 2,
+    "nativeCurrencySymbol": "ETH"
+  },
+  "chainBeta": {
+    "chainId": 2337,
+    "chainSelector": "12922642891491394802",
+    "router": "0x9ab7ca8a88f8e351f9b0eeea5777929210199295",
+    "rmnProxy": "0x664d6ebabbd5cf656ed07a509affbc81f9615741",
+    "tokenAdminRegistry": "0x43d1f9096674b5722d359b6402381816d5b22f28",
+    "registryModuleOwnerCustom": "0x4245cf4518cb2c280f5e9c6a03c90c147f80b4d9",
+    "link": "0x42699A7612A82f1d9C36148af9C77354759b210b",
+    "confirmations": 2,
+    "nativeCurrencySymbol": "ETH"
   }
 }
